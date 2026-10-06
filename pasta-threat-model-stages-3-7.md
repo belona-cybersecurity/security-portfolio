@@ -89,7 +89,7 @@ Amenazas principales (estilo STRIDE + contexto real):
 - Llamar `<asignar-rol>` como editor → **BLOQUEADO** (App Check + `exigirAdmin`, validado)
 
 **Objetivo: manipular el sitio (defacement)**
-- Alterar archivos servidos → detectado por **FIM** (validado con alerta Telegram)
+- Alterar archivos servidos → detectado por **FIM** (validado con alerta el canal de alertas)
 
 **Objetivo: robar documentos de expedientes**
 - Acceder a Storage sin rol → **BLOQUEADO** (reglas `storage/unauthorized`, validado)

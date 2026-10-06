@@ -20,7 +20,7 @@ Lecciones aprendidas). Uso: seguir el playbook correspondiente ante el incidente
 ---
 
 ## Playbook 1 — Sitio comprometido / defacement (alerta del FIM)
-**Disparador:** llega una alerta del FIM a Telegram ("CAMBIO en <archivo>") o el job FIM queda en rojo.
+**Disparador:** llega una alerta del monitoreo de integridad ("CAMBIO en <archivo>") o el job FIM queda en rojo.
 
 1. **Detección/Verificación:** abrir el sitio en incógnito y comparar; revisar el log del FIM (qué archivo cambió). ¿Fue un deploy legítimo tuyo? → si sí, regenerar baseline y cerrar. Si NO →
 2. **Contención:** si hay contenido malicioso, redeployar de inmediato la versión buena desde Git (`firebase deploy --only hosting`) o hacer rollback del hosting en la consola. Considerar poner el sitio en mantenimiento.

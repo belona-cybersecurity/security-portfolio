@@ -19,7 +19,7 @@ Follow the matching playbook when an incident occurs.
 ---
 
 ## Playbook 1 — Compromised site / defacement (FIM alert)
-**Trigger:** a FIM alert reaches Telegram ("CHANGE in <file>") or the FIM job turns red.
+**Trigger:** a file-integrity alert reaches the alerting channel ("CHANGE in <file>") or the FIM job turns red.
 1. **Verify:** open the site in incognito and compare; check the FIM log (which file changed). Was it your own legitimate deploy? If yes → regenerate the baseline and close. If NO →
 2. **Contain:** if malicious content exists, immediately redeploy the good version from Git (`firebase deploy --only hosting`) or roll back Hosting in the console. Consider maintenance mode.
 3. **Eradicate:** determine how the change got in: leaked deploy credential? repo access? Rotate Firebase/GitHub credentials. Review recent Actions/commits.
@@ -48,7 +48,7 @@ Follow the matching playbook when an incident occurs.
 ## Playbook 4 — Exposed credential / secret
 **Trigger:** a token/key/password found in a public place (repo, site, logs) — e.g., the `.git` pentest finding.
 1. **Contain:** remove the exposure immediately (delete file, redeploy).
-2. **Rotate the credential NOW:** revoke and regenerate the compromised secret (GitHub token, API key, Gmail app password, etc.). Assume it was seen.
+2. **Rotate the credential NOW:** revoke and regenerate the compromised secret (repository token, API key, mail credential, etc.). Assume it was seen.
 3. **Investigate:** what permissions did it have? was it used? Check access logs.
 4. **Prevent:** move secrets to Secret Manager; never in the repo or Hosting.
 

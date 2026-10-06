@@ -128,7 +128,7 @@
   <rect x="60" y="800" width="230" height="38" rx="6" fill="#f5f0fa" stroke="#8a6bbf" stroke-width="1.2"/>
   <text x="175" y="824" font-size="11" fill="#4a2f7a" text-anchor="middle">Gmail SMTP → legal@ (nodemailer)</text>
   <rect x="400" y="800" width="230" height="38" rx="6" fill="#f5f0fa" stroke="#8a6bbf" stroke-width="1.2"/>
-  <text x="515" y="824" font-size="11" fill="#4a2f7a" text-anchor="middle">Gemini API (AI auditor proxy)</text>
+  <text x="515" y="824" font-size="11" fill="#4a2f7a" text-anchor="middle">el proveedor de IA API (AI auditor proxy)</text>
 
   <!-- Detection panel (right) -->
   <rect x="700" y="252" width="284" height="440" rx="8" fill="#fdf6e9" stroke="#b7791f" stroke-width="1.5"/>
@@ -136,8 +136,8 @@
 
   <rect x="716" y="292" width="252" height="70" rx="6" fill="#ffffff" stroke="#d9b26a"/>
   <text x="842" y="313" font-size="12" font-weight="600" fill="#8a5a12" text-anchor="middle">File Integrity Monitoring</text>
-  <text x="842" y="330" font-size="10" fill="#6b5518" text-anchor="middle">SHA-256 of 13 live files · every 6h</text>
-  <text x="842" y="346" font-size="10" fill="#6b5518" text-anchor="middle">GitHub Actions → Telegram alerts</text>
+  <text x="842" y="330" font-size="10" fill="#6b5518" text-anchor="middle">SHA-256 of live site files · every 6h</text>
+  <text x="842" y="346" font-size="10" fill="#6b5518" text-anchor="middle">GitHub Actions → el canal de alertas alerts</text>
 
   <rect x="716" y="372" width="252" height="70" rx="6" fill="#ffffff" stroke="#d9b26a"/>
   <text x="842" y="393" font-size="12" font-weight="600" fill="#8a5a12" text-anchor="middle">Cloud Monitoring</text>

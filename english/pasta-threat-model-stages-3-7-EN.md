@@ -88,7 +88,7 @@ Attack trees for top threats (and the control that cuts each path):
 - Call `<asignar-rol>` as editor → **BLOCKED** (App Check + `exigirAdmin`, validated)
 
 **Goal: tamper with the site (defacement)**
-- Alter served files → detected by **FIM** (validated with Telegram alert)
+- Alter served files → detected by **FIM** (validated with el canal de alertas alert)
 
 **Goal: steal case documents**
 - Access Storage without a role → **BLOCKED** (rules `storage/unauthorized`, validated)

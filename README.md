@@ -43,7 +43,7 @@ Security engineering work hardening a **production legal-services web platform**
 
 | # | Document | What it covers |
 |---|---|---|
-| 1 | [Case Study — DevSecOps](english/case-study-devsecops-troubleshooting-EN.pdf) | Executive overview of the full engagement (**read this first**) |
+| 1 | [Caso de estudio — DevSecOps](caso-de-estudio-devsecops.md) · [EN](english/case-study-devsecops-troubleshooting-EN.md) | Resumen ejecutivo de todo el trabajo (**empiece por aquí**) |
 | 2 | [Penetration Test Report](english/pentest-report-cliente-a-EN.pdf) | Recon, authz testing, privilege-escalation attempts, findings & remediation |
 | 3 | [PASTA Threat Model (stages 3–7)](english/pasta-threat-model-stages-3-7-EN.pdf) | Decomposition, threats, CWE/OWASP mapping, attack trees, residual-risk matrix |
 | 4 | [**Recovery capability: from "we have backups" to "we can restore"**](english/disaster-recovery-EN.md) | RPO/RTO, 3-2-1, and **a control documented as implemented that wasn't** — found by going to test the restore |
