@@ -10,8 +10,12 @@ Manual de respuesta a incidentes de seguridad. Estructura basada en el ciclo
 **NIST** (Preparación → Detección → Contención → Erradicación → Recuperación →
 Lecciones aprendidas). Uso: seguir el playbook correspondiente ante el incidente.
 
-## Contactos y accesos clave (completar)
-- Responsable técnico: **Juan M. Morales** — contact@belonacyber.com
+## Contactos y accesos clave
+
+> Esta sección la completa el cliente con sus propios datos antes de que el
+> playbook entre en uso. Un procedimiento de respuesta sin teléfonos reales
+> no sirve: en un incidente nadie tiene tiempo de buscarlos.
+- Responsable técnico: **Belona Cybersecurity** — contact@belonacyber.com
 - Responsable de datos / legal: **legal@cliente-a.example**
 - Consola Firebase: https://console.firebase.google.com/project/cliente-a
 - Repo: github.com/<organizacion>/<repo-privado>

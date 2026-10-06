@@ -5,7 +5,7 @@
 > infraestructura se reemplazaron por marcadores (`Cliente A`, `cliente-a`) antes de
 > publicarlo. Belona Cybersecurity no publica datos identificables de un cliente sin su
 > autorización por escrito.
-### Dirigido a: usuarios del panel (ej. Wilinton) · Estudio jurídico
+### Dirigido a: usuarios del panel · Estudio jurídico
 
 **Marco de referencia:** CIS Controls v8 — **Control 14** (Security Awareness and
 Skills Training) y **NIST CSF — PR.AT** (Awareness and Training). Cada módulo
@@ -61,7 +61,7 @@ indica el control que lo respalda.
 *(CIS 14.6 · NIST RS)*
 - Si ves **algo raro** (un correo sospechoso, una alerta, acceso que no reconocés, un archivo cambiado):
   1. **No lo ignores.**
-  2. **Avisá de inmediato** al responsable técnico (Juan) y/o a legal@cliente-a.example.
+  2. **Avisá de inmediato** al responsable técnico y/o a legal@cliente-a.example.
   3. No intentes "arreglarlo" solo si no estás seguro.
 - Reportar a tiempo puede evitar un incidente grave. **Reportar no es molestar, es proteger.**
 

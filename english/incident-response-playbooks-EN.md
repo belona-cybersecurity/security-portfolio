@@ -9,8 +9,12 @@ Security incident response manual. Structure based on the **NIST** cycle
 (Preparation → Detection → Containment → Eradication → Recovery → Lessons Learned).
 Follow the matching playbook when an incident occurs.
 
-## Key contacts and access (to complete)
-- Technical lead: **Juan M. Morales** — contact@belonacyber.com
+## Key contacts and access
+
+> The client fills this section with their own details before the playbook
+> goes into use. A response procedure without real phone numbers is useless:
+> during an incident nobody has time to look them up.
+- Technical lead: **Belona Cybersecurity** — contact@belonacyber.com
 - Data/legal owner: **legal@cliente-a.example**
 - Firebase console: https://console.firebase.google.com/project/cliente-a
 - Repo: github.com/<organizacion>/<repo-privado>
