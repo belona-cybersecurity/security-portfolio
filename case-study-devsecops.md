@@ -214,3 +214,12 @@ genuinely trying, is useful information.
 
 *From the technical portfolio of Belona Cybersecurity. Real work on a production
 platform, performed under authorization from the owner.*
+
+<!-- atribucion -->
+---
+
+*From the technical portfolio of **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. All rights reserved. Published for evaluation
+by prospective clients and employers; see [`LICENSE`](LICENSE) for terms.*

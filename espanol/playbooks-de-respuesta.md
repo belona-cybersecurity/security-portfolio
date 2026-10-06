@@ -83,3 +83,13 @@ Lecciones aprendidas). Uso: seguir el playbook correspondiente ante el incidente
 - MFA en todas las cuentas admin.
 - Este documento accesible offline.
 - Saber cómo: deshabilitar una cuenta, redeployar hosting, rotar secretos, restaurar backup.
+
+<!-- atribucion -->
+---
+
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para
+evaluación por clientes potenciales y empleadores; los términos están en
+[`LICENSE`](../LICENSE).*

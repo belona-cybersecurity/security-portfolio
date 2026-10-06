@@ -97,3 +97,13 @@ incidentes (NIST) · formación en seguridad · cumplimiento en protección de d
 legal. Trabajo ejecutado por el responsable técnico único. Los valores sensibles
 —claves, credenciales y datos de clientes— están deliberadamente excluidos de
 este repositorio.*
+
+<!-- atribucion -->
+---
+
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para
+evaluación por clientes potenciales y empleadores; los términos están en
+[`LICENSE`](../LICENSE).*

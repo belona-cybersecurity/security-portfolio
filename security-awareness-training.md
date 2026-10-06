@@ -1,8 +1,8 @@
-# Security Awareness Training — Cliente A
+# Security Awareness Training — Client A
 
 > **Anonymization note.** This report documents real work performed under authorization
 > from the owner. The client's name and infrastructure identifiers were replaced with
-> placeholders (`Cliente A`, `cliente-a`) before publication. Belona Cybersecurity does not
+> placeholders (`Client A`, `cliente-a`) before publication. Belona Cybersecurity does not
 > publish identifiable client data without written authorization.
 ### Audience: panel users (e.g., lawyers) · Law firm
 
@@ -71,3 +71,12 @@ control that backs it.
 - Update the material when threats or the system change.
 
 *Based on CIS Controls v8 (Control 14) and NIST CSF (PR.AT). See also the incident response playbooks.*
+
+<!-- atribucion -->
+---
+
+*From the technical portfolio of **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. All rights reserved. Published for evaluation
+by prospective clients and employers; see [`LICENSE`](LICENSE) for terms.*

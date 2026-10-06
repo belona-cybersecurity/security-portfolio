@@ -228,3 +228,13 @@ de poder escribirle a mis clientes"**, que es lo que de verdad cuesta dinero.
 
 *Documento del portafolio técnico de Belona Cybersecurity. El código completo
 vive en el repositorio privado del sitio; los fragmentos aquí son textuales.*
+
+<!-- atribucion -->
+---
+
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para
+evaluación por clientes potenciales y empleadores; los términos están en
+[`LICENSE`](../LICENSE).*

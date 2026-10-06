@@ -119,7 +119,17 @@ Cumplimiento: consentimiento con prueba, política 1581 con transferencia intern
 
 ### Recomendaciones (riesgo aceptado / futuro)
 1. CSP estricta de scripts (refactor inline). 2. Validación de campos en reglas (tamaño/tipo).
-3. Migrar GEMINI_KEY a Secret Manager. 4. Alerta de presupuesto. 5. Repetir pentest tras cambios mayores.
+3. Completar la migración de las claves de servicios externos al almacén de secretos gestionado. 4. Alerta de presupuesto. 5. Repetir el pentest tras cambios mayores.
 
 ### Conclusión
 El sistema presenta **riesgo residual bajo** en las amenazas relevantes, con controles en las tres capas (prevención, detección, recuperación) validados mediante pentest autorizado. Modelo a revisar ante cambios significativos.
+
+<!-- atribucion -->
+---
+
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para
+evaluación por clientes potenciales y empleadores; los términos están en
+[`LICENSE`](../LICENSE).*

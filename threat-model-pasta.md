@@ -1,8 +1,8 @@
-# PASTA Threat Model — Cliente A
+# PASTA Threat Model — Client A
 
 > **Anonymization note.** This report documents real work performed under authorization
 > from the owner. The client's name and infrastructure identifiers were replaced with
-> placeholders (`Cliente A`, `cliente-a`) before publication. Belona Cybersecurity does not
+> placeholders (`Client A`, `cliente-a`) before publication. Belona Cybersecurity does not
 > publish identifiable client data without written authorization.
 ### Stages 3 to 7 (Stages 1-2, Objectives and Scope, documented previously)
 
@@ -118,7 +118,16 @@ Compliance: consent with proof, Law 1581 policy with international transfer clau
 
 ### Recommendations (accepted risk / future)
 1. Strict script CSP (refactor inline). 2. Field validation in rules (size/type).
-3. Migrate GEMINI_KEY to Secret Manager. 4. Budget alert. 5. Re-run pentest after major changes.
+3. Complete the migration of external API keys to the managed secret store. 4. Budget alert. 5. Re-run the pentest after major changes.
 
 ### Conclusion
 The system presents **low residual risk** across the relevant threats, with controls in all three layers (prevention, detection, recovery) validated via authorized penetration testing. The model should be reviewed upon significant changes.
+
+<!-- atribucion -->
+---
+
+*From the technical portfolio of **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. All rights reserved. Published for evaluation
+by prospective clients and employers; see [`LICENSE`](LICENSE) for terms.*

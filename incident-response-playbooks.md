@@ -1,8 +1,8 @@
-# Incident Response Playbooks — Cliente A
+# Incident Response Playbooks — Client A
 
 > **Anonymization note.** This report documents real work performed under authorization
 > from the owner. The client's name and infrastructure identifiers were replaced with
-> placeholders (`Cliente A`, `cliente-a`) before publication. Belona Cybersecurity does not
+> placeholders (`Client A`, `cliente-a`) before publication. Belona Cybersecurity does not
 > publish identifiable client data without written authorization.
 
 Security incident response manual. Structure based on the **NIST** cycle
@@ -71,3 +71,12 @@ Follow the matching playbook when an incident occurs.
 - MFA on all admin accounts.
 - This document available offline.
 - Know how to: disable an account, redeploy hosting, rotate secrets, restore a backup.
+
+<!-- atribucion -->
+---
+
+*From the technical portfolio of **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. All rights reserved. Published for evaluation
+by prospective clients and employers; see [`LICENSE`](LICENSE) for terms.*

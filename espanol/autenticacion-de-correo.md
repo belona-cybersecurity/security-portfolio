@@ -241,3 +241,13 @@ se puede enseñar.
 
 *Caso del portafolio técnico de Belona Cybersecurity. Realizado sobre dominio
 propio; los valores mostrados son reales.*
+
+<!-- atribucion -->
+---
+
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para
+evaluación por clientes potenciales y empleadores; los términos están en
+[`LICENSE`](../LICENSE).*

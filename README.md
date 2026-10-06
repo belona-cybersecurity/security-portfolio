@@ -72,3 +72,12 @@ Cloud security (GCP/Firebase) · IAM & RBAC · security rules as code · penetra
 ---
 
 *Production platform: a Colombian law firm's public website + admin panel. Work performed by the sole technical owner as a self-directed Cloud Security / DevSecOps portfolio project.*
+
+<!-- atribucion -->
+---
+
+*From the technical portfolio of **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. All rights reserved. Published for evaluation
+by prospective clients and employers; see [`LICENSE`](LICENSE) for terms.*

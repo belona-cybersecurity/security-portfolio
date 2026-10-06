@@ -226,3 +226,12 @@ lose the ability to reach my clients"** — the one that actually costs money.
 
 *From the technical portfolio of Belona Cybersecurity. The full source lives in
 the site's private repository; the snippets here are verbatim.*
+
+<!-- atribucion -->
+---
+
+*From the technical portfolio of **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. All rights reserved. Published for evaluation
+by prospective clients and employers; see [`LICENSE`](LICENSE) for terms.*

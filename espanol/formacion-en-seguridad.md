@@ -80,3 +80,13 @@ indica el control que lo respalda.
 
 *Basado en CIS Controls v8 (Control 14) y NIST CSF (PR.AT). Ver también los
 playbooks de respuesta a incidentes.*
+
+<!-- atribucion -->
+---
+
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
+
+*© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para
+evaluación por clientes potenciales y empleadores; los términos están en
+[`LICENSE`](../LICENSE).*

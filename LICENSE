@@ -1,0 +1,90 @@
+# Copyright notice and terms of use
+
+**© 2026 Belona Cybersecurity LLC.** All rights reserved.
+Powder Springs, Georgia, United States · belonacyber.com · contact@belonacyber.com
+
+This repository contains the technical portfolio of Belona Cybersecurity LLC: the
+documentation of security engineering work performed by the company, authored by
+the company, and published by the company. It is **not** open-source material and
+it is **not** a template.
+
+## What you may do
+
+You may read, download and print these documents, and share links to this
+repository, for the purpose of evaluating Belona Cybersecurity LLC as a service
+provider, a vendor or an employer. You may quote short excerpts for commentary or
+review, provided the company is credited by name.
+
+## What requires written permission
+
+Everything else, including:
+
+- republishing these documents, in whole or in part, anywhere else;
+- presenting this work, or any part of it, as your own or as your
+  organization's;
+- removing or altering the authorship, copyright or contact information;
+- using these documents as a template, model or deliverable for a third party;
+- training a machine-learning model on this material.
+
+Requests go to **contact@belonacyber.com**.
+
+## On the anonymization
+
+The engagements documented here are real and were performed under authorization
+from the system owner. Client names and infrastructure identifiers were replaced
+with placeholders before publication. Belona Cybersecurity LLC does not publish
+identifiable client data without written authorization.
+
+## Authorship of record
+
+The authoritative record of authorship is the commit history of this repository,
+published under the `belona-cybersecurity` GitHub organization. Each document
+carries the company's name in its header and footer, and each PDF carries it in
+its document metadata.
+
+---
+
+# Aviso de derechos de autor y condiciones de uso
+
+**© 2026 Belona Cybersecurity LLC.** Todos los derechos reservados.
+Powder Springs, Georgia, Estados Unidos · belonacyber.com · contact@belonacyber.com
+
+Este repositorio contiene el portafolio técnico de Belona Cybersecurity LLC: la
+documentación del trabajo de ingeniería de seguridad realizado por la empresa,
+escrito por la empresa y publicado por la empresa. **No** es material de código
+abierto y **no** es una plantilla.
+
+## Lo que se permite
+
+Leer, descargar e imprimir estos documentos, y compartir enlaces a este
+repositorio, con el fin de evaluar a Belona Cybersecurity LLC como proveedor de
+servicios, como contratista o como empleador. Se permite citar extractos breves
+para comentario o reseña, siempre que se acredite a la empresa por su nombre.
+
+## Lo que requiere permiso por escrito
+
+Todo lo demás, incluyendo:
+
+- volver a publicar estos documentos, completos o en parte, en otro lugar;
+- presentar este trabajo, o cualquier parte de él, como propio o como de su
+  organización;
+- eliminar o alterar la información de autoría, derechos de autor o contacto;
+- usar estos documentos como plantilla, modelo o entregable para un tercero;
+- entrenar un modelo de aprendizaje automático con este material.
+
+Las solicitudes van a **contact@belonacyber.com**.
+
+## Sobre la anonimización
+
+Los trabajos aquí documentados son reales y se realizaron con autorización del
+propietario del sistema. Los nombres de clientes y los identificadores de
+infraestructura se reemplazaron por marcadores antes de publicarlos. Belona
+Cybersecurity LLC no publica datos identificables de un cliente sin su
+autorización por escrito.
+
+## Autoría de registro
+
+El registro de autoría con valor probatorio es el historial de commits de este
+repositorio, publicado bajo la organización de GitHub `belona-cybersecurity`.
+Cada documento lleva el nombre de la empresa en su encabezado y en su pie, y cada
+PDF lo lleva en sus metadatos.
