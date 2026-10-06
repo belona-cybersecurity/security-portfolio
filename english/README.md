@@ -44,11 +44,12 @@ Hardening a production legal-services web platform on **Firebase / Google Cloud*
 | 1 | [Case Study — DevSecOps](case-study-devsecops-troubleshooting-EN.pdf) | Executive overview of the full engagement (**read this first**) |
 | 2 | [Penetration Test Report](pentest-report-cliente-a-EN.pdf) | Recon, authz testing, privilege-escalation attempts, findings & remediation |
 | 3 | [PASTA Threat Model (stages 3–7)](pasta-threat-model-stages-3-7-EN.pdf) | Decomposition, threats, CWE/OWASP mapping, attack trees, residual-risk matrix |
-| 4 | [Backup & DR Runbook](backup-runbook-cliente-a-EN.pdf) | 3-2-1 strategy, RPO/RTO, restore procedures |
-| 5 | [Incident Response Playbooks](incident-response-playbooks-EN.pdf) | 5 NIST-based playbooks (breach, defacement, data loss, account compromise, DoS) |
-| 6 | [Security Awareness Training](security-awareness-training-EN.pdf) | 7 modules mapped to CIS Control 14 / NIST CSF PR.AT |
-| 7 | [Lab Report — Firewall & Port Scanning](lab-report-firewall-port-scanning-EN.pdf) | Hands-on nmap/VPC lab: open/closed/filtered states + SSH hardening finding |
-| 8 | [Cheat Sheet — Firewall / nmap / GCP](cheatsheet-firewall-nmap-gcp-EN.pdf) | Command reference for the lab above |
+| 4 | [**Recovery capability**](disaster-recovery-EN.md) | RPO/RTO, 3-2-1, and **a control documented as implemented that wasn't** — found by going to test the restore |
+| 5 | [**Email authentication: SPF, DKIM & DMARC**](email-authentication-EN.md) | Staged rollout, reading the first DMARC report, and a DNS migration with **zero mail downtime** |
+| 6 | [**Hardening a contact form**](hardening-contact-form-EN.md) | Eight layers on a Cloudflare Worker, **each exercised with `curl` in production** |
+| 7 | [Incident Response Playbooks](incident-response-playbooks-EN.pdf) | 5 NIST-based playbooks (breach, defacement, data loss, account compromise, DoS) |
+| 8 | [Security Awareness Training](security-awareness-training-EN.pdf) | 7 modules mapped to CIS Control 14 / NIST CSF PR.AT |
+
 
 *Each document is also available in Markdown (`.md`) alongside the PDF.*
 

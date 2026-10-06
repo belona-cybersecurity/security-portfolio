@@ -46,17 +46,15 @@ Security engineering work hardening a **production legal-services web platform**
 | 1 | [Case Study — DevSecOps](english/case-study-devsecops-troubleshooting-EN.pdf) | Executive overview of the full engagement (**read this first**) |
 | 2 | [Penetration Test Report](english/pentest-report-cliente-a-EN.pdf) | Recon, authz testing, privilege-escalation attempts, findings & remediation |
 | 3 | [PASTA Threat Model (stages 3–7)](english/pasta-threat-model-stages-3-7-EN.pdf) | Decomposition, threats, CWE/OWASP mapping, attack trees, residual-risk matrix |
-| 4 | [Backup & DR Runbook](english/backup-runbook-cliente-a-EN.pdf) | 3-2-1 strategy, RPO/RTO, restore procedures |
-| 5 | [Incident Response Playbooks](english/incident-response-playbooks-EN.pdf) | 5 NIST-based playbooks (breach, defacement, data loss, account compromise, DoS) |
-| 6 | [Security Awareness Training](english/security-awareness-training-EN.pdf) | 7 modules mapped to CIS Control 14 / NIST CSF PR.AT |
-| 7 | [Lab Report — Firewall & Port Scanning](english/lab-report-firewall-port-scanning-EN.pdf) | Hands-on nmap/VPC lab: open/closed/filtered states + SSH hardening finding |
-| 8 | [Cheat Sheet — Firewall / nmap / GCP](english/cheatsheet-firewall-nmap-gcp-EN.pdf) | Command reference for the lab above |
-| 9 | [**Email authentication: SPF, DKIM & DMARC**](english/email-authentication-EN.md) | Staged rollout (`none` → `quarantine` → `reject`), reading the first DMARC report, and a DNS migration with **zero mail downtime** |
-| 10 | [**Hardening a contact form against abuse**](english/hardening-contact-form-EN.md) | Eight layers on a Cloudflare Worker — captcha verified server-side, honeypot, secrets off disk — **each one exercised with `curl` in production** |
+| 4 | [**Recovery capability: from "we have backups" to "we can restore"**](english/disaster-recovery-EN.md) | RPO/RTO, 3-2-1, and **a control documented as implemented that wasn't** — found by going to test the restore |
+| 5 | [**Email authentication: SPF, DKIM & DMARC**](english/email-authentication-EN.md) | Staged rollout (`none` → `quarantine` → `reject`), reading the first DMARC report, and a DNS migration with **zero mail downtime** |
+| 6 | [**Hardening a contact form against abuse**](english/hardening-contact-form-EN.md) | Eight layers on a Cloudflare Worker — captcha verified server-side, honeypot, secrets off disk — **each one exercised with `curl` in production** |
+| 7 | [Incident Response Playbooks](english/incident-response-playbooks-EN.pdf) | 5 NIST-based playbooks (breach, defacement, data loss, account compromise, DoS) |
+| 8 | [Security Awareness Training](english/security-awareness-training-EN.pdf) | 7 modules mapped to CIS Control 14 / NIST CSF PR.AT |
 
 *Each document is also available in Markdown (`.md`) next to the PDF. See [`english/`](english/) for the full set.*
 
-**Spanish originals** (versiones en español) are in the repository root: pentest, backup runbook, incident response, security awareness, PASTA threat model, firewall cheat sheet, and lab report.
+**Las versiones en español** están en la raíz del repositorio. Cada documento existe en los dos idiomas, salvo el caso de estudio inicial.
 
 ---
 

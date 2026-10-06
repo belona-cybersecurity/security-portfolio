@@ -67,7 +67,7 @@ Lecciones aprendidas). Uso: seguir el playbook correspondiente ante el incidente
    - Reciente (≤7 días) → **PITR**
    - Hasta 14 días → **backup diario** (restaurar a base nueva)
    - Documentos borrados → **versionado de Storage**
-   - Ver: `backup-runbook-cliente-a.md`
+   - Ver: `recuperacion-ante-desastres.md`
 3. Validar la restauración antes de reemplazar producción.
 4. **Lecciones:** ¿por qué se borró? ¿hace falta más restricción o confirmaciones?
 
