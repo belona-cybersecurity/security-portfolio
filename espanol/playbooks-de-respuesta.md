@@ -87,7 +87,7 @@ Lecciones aprendidas). Uso: seguir el playbook correspondiente ante el incidente
 <!-- atribucion -->
 ---
 
-*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Metro Atlanta,
 Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
 
 *© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para

@@ -127,7 +127,7 @@ El sistema presenta **riesgo residual bajo** en las amenazas relevantes, con con
 <!-- atribucion -->
 ---
 
-*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Metro Atlanta,
 Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
 
 *© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para

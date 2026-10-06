@@ -1,6 +1,6 @@
 # Portafolio de seguridad — Belona Cybersecurity
 
-**Belona Cybersecurity LLC** · Powder Springs, Georgia
+**Belona Cybersecurity LLC** · Metro Atlanta, Georgia
 [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com
 
 > *English version: [`../README.md`](../README.md)*
@@ -101,7 +101,7 @@ este repositorio.*
 <!-- atribucion -->
 ---
 
-*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Metro Atlanta,
 Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
 
 *© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para

@@ -230,7 +230,7 @@ the site's private repository; the snippets here are verbatim.*
 <!-- atribucion -->
 ---
 
-*From the technical portfolio of **Belona Cybersecurity LLC** — Powder Springs,
+*From the technical portfolio of **Belona Cybersecurity LLC** — Metro Atlanta,
 Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
 
 *© 2026 Belona Cybersecurity LLC. All rights reserved. Published for evaluation

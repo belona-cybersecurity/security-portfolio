@@ -236,7 +236,7 @@ plataforma en producción, con autorización del propietario.*
 <!-- atribucion -->
 ---
 
-*Del portafolio técnico de **Belona Cybersecurity LLC** — Powder Springs,
+*Del portafolio técnico de **Belona Cybersecurity LLC** — Metro Atlanta,
 Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
 
 *© 2026 Belona Cybersecurity LLC. Todos los derechos reservados. Publicado para

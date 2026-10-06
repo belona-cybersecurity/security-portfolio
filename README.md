@@ -1,6 +1,6 @@
 # Security Portfolio — Belona Cybersecurity
 
-**Belona Cybersecurity LLC** · Powder Springs, Georgia
+**Belona Cybersecurity LLC** · Metro Atlanta, Georgia
 [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com
 
 > *Versión en español: [`espanol/README.md`](espanol/README.md)*
@@ -76,7 +76,7 @@ Cloud security (GCP/Firebase) · IAM & RBAC · security rules as code · penetra
 <!-- atribucion -->
 ---
 
-*From the technical portfolio of **Belona Cybersecurity LLC** — Powder Springs,
+*From the technical portfolio of **Belona Cybersecurity LLC** — Metro Atlanta,
 Georgia · [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com*
 
 *© 2026 Belona Cybersecurity LLC. All rights reserved. Published for evaluation
