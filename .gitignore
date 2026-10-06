@@ -1,0 +1,23 @@
+# Artefactos temporales de conversión md -> html -> pdf
+*.html
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Node (por si algún día se agrega tooling)
+node_modules/
+
+# Seguridad: nunca subir secretos/credenciales
+*.env
+.env*
+*secret*
+*credential*
+*token*
+*.key
+*.pem
