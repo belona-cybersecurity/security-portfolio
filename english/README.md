@@ -56,7 +56,7 @@ Hardening a production legal-services web platform on **Firebase / Google Cloud*
 
 ## Tech stack
 
-**Cloud:** Firebase (Hosting, Authentication / Identity Platform, Firestore, Storage, Cloud Functions gen2 · Node 24), Google Cloud Platform, App Check (reCAPTCHA v3), Secret Manager, Cloud Monitoring, Cloud Scheduler.
+**Cloud:** Firebase (Hosting, Authentication / Identity Platform, Firestore, Storage, Cloud Functions), Google Cloud Platform, App Check, Secret Manager, Cloud Monitoring, Cloud Scheduler.
 **Security:** IAM / RBAC (custom claims), security rules as code, MFA/TOTP, penetration testing (nmap), File Integrity Monitoring (Python + GitHub Actions), Dependabot, PASTA threat modeling, NIST incident response.
 
 ## Skills demonstrated

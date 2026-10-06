@@ -72,7 +72,7 @@ gcloud storage cp "gs://.../ARCHIVO#GENERACION" "gs://.../ARCHIVO"
 ## Nivel B — offsite / 3-2-1 (IMPLEMENTADO)
 - **Bucket separado:** `gs://cliente-a-backups` (multi-region `us`, geo-redundante),
   con lifecycle que borra exports > 90 dias.
-- **Export automatico:** Cloud Scheduler job `firestore-backup-weekly` (us-central1),
+- **Export automatico:** Cloud Scheduler job el job de export programado (us-central1),
   domingos 3am (America/Bogota), exporta a `gs://cliente-a-backups/scheduled`.
   Usa la cuenta de servicio `backup-sa@cliente-a.iam.gserviceaccount.com`
   (rol `datastore.importExportAdmin`).
@@ -89,6 +89,6 @@ gcloud firestore import gs://cliente-a-backups/scheduled
 ### Verificar / operar el backup automatico
 ```bash
 gcloud scheduler jobs list --location=us-central1
-gcloud scheduler jobs run firestore-backup-weekly --location=us-central1   # correr a mano
+gcloud scheduler jobs run export-programado --location=us-central1   # correr a mano
 gcloud storage ls gs://cliente-a-backups/scheduled/                   # ver la ultima copia
 ```

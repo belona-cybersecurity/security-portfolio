@@ -1,6 +1,6 @@
 # Case Study — Securing a Legal Firm's Web Platform (Firebase / GCP)
 
-**Role:** Sole technical owner (self-taught) · **Client:** Colombian law firm · **Stack:** Firebase (Hosting, Auth/Identity Platform, Firestore, Storage, Cloud Functions gen2 · Node 24), GCP, App Check (reCAPTCHA v3).
+**Role:** Sole technical owner (self-taught) · **Client:** Colombian law firm · **Stack:** Firebase (Hosting, Auth/Identity Platform, Firestore, Storage, Cloud Functions), GCP, App Check.
 
 > A production case study documenting how I took a functional-but-insecure legal website to a hardened, monitored, and compliant platform — implementing authentication, RBAC, a pentest with remediation, backups, monitoring, and data-protection compliance.
 
@@ -23,7 +23,7 @@ Enabled TOTP multi-factor auth on the admin panel. **Key debugging win:** the en
 Role model via **custom claims**: `admin` (full), `abogado` (content, inquiries, legal cases), `editor` (blog only). Enforced with granular **Firestore & Storage security rules** and mirrored in the UI (sections hidden per role — defense in depth, not UI-only).
 
 ### 3. Secure contact form
-Replaced a third-party form service with a **Cloud Function** (`enviarConsulta`) that validates server-side, enforces **App Check** (`enforceAppCheck: true`), stores inquiries with the Admin SDK, and emails via Gmail SMTP from a dedicated sender account — **removing a third party from the trust boundary**.
+Replaced a third-party form service with a **Cloud Function** (`<enviar-consulta>`) that validates server-side, enforces **App Check** (`enforceAppCheck: true`), stores inquiries with the Admin SDK, and emails via Gmail SMTP from a dedicated sender account — **removing a third party from the trust boundary**.
 
 ### 4. Legal-cases module + private documents
 CRUD for insolvency cases with document upload to **private Storage** (no public tokenized URLs; authenticated `getBlob` downloads), audit fields, and size/type limits in Storage rules.

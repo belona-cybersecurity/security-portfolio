@@ -20,9 +20,9 @@ to the system (web + Firebase).
 | Public frontend | HTML/CSS/JS (Firebase Hosting) | Site + contact form |
 | Admin panel | admin.html | Management (guides, blog, inquiries, cases, users, logs) |
 | Authentication | Firebase Auth + Identity Platform | Login + TOTP MFA |
-| Database | Firestore (`nam5`) | guias, servicios, posts, consultas, procesos_insolvencia, auditoria |
+| Database | Firestore (`nam5`) | guias, servicios, posts, consultas, expedientes, auditoria |
 | Files | Firebase Storage | Case documents |
-| Backend | Cloud Functions (Node 24) | enviarConsulta, admin*, auditarSituacion |
+| Backend | Cloud Functions | contact submission, admin operations, AI advisory |
 
 ### Actors / Roles
 - **Anonymous public** (site visitors; submit inquiries)
@@ -85,7 +85,7 @@ Attack trees for top threats (and the control that cuts each path):
 - Path 4: download the repo via `.git` → was **OPEN**, now **CLOSED**
 
 **Goal: become admin (escalation)**
-- Call `adminAsignarRol` as editor → **BLOCKED** (App Check + `exigirAdmin`, validated)
+- Call `<asignar-rol>` as editor → **BLOCKED** (App Check + `exigirAdmin`, validated)
 
 **Goal: tamper with the site (defacement)**
 - Alter served files → detected by **FIM** (validated with Telegram alert)

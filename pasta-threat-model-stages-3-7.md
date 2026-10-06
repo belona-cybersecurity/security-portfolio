@@ -21,9 +21,9 @@ etapas 3-7 aplicadas al sistema (web + Firebase).
 | Frontend público | HTML/CSS/JS (Firebase Hosting) | Sitio + formulario de contacto |
 | Panel admin | admin.html | Gestión (guías, blog, consultas, procesos, usuarios, logs) |
 | Autenticación | Firebase Auth + Identity Platform | Login + MFA TOTP |
-| Base de datos | Firestore (`nam5`) | guias, servicios, posts, consultas, procesos_insolvencia, auditoria |
+| Base de datos | Firestore (`nam5`) | guias, servicios, posts, consultas, expedientes, auditoria |
 | Archivos | Firebase Storage | Documentos de expedientes |
-| Backend | Cloud Functions (Node 24) | enviarConsulta, admin* , auditarSituacion |
+| Backend | Cloud Functions | envío de contacto, operaciones de admin, asesor IA |
 
 ### Actores / Roles
 - **Público anónimo** (visitantes del sitio; envían consultas)
@@ -86,7 +86,7 @@ Amenazas principales (estilo STRIDE + contexto real):
 - Vía 4: bajar el repo por `.git` → estaba **ABIERTO**, ahora **CERRADO**
 
 **Objetivo: convertirse en admin (escalada)**
-- Llamar `adminAsignarRol` como editor → **BLOQUEADO** (App Check + `exigirAdmin`, validado)
+- Llamar `<asignar-rol>` como editor → **BLOQUEADO** (App Check + `exigirAdmin`, validado)
 
 **Objetivo: manipular el sitio (defacement)**
 - Alterar archivos servidos → detectado por **FIM** (validado con alerta Telegram)

@@ -29,7 +29,7 @@ Security engineering work hardening a **production legal-services web platform**
 | **Authentication** | MFA/TOTP on the admin panel (resolved a session-timing enrollment blocker) |
 | **Authorization** | Role-based access control (admin / lawyer / editor) enforced by Firestore & Storage security rules |
 | **Pentest** | 3-phase authorized test; found & remediated a **critical** `.git` + GitHub-token exposure served by Hosting |
-| **Abuse prevention** | App Check (reCAPTCHA v3) + server-side rate limiting on the contact form |
+| **Abuse prevention** | App Check + server-side rate limiting on the contact form |
 | **Hardening** | Content-Security-Policy allow-list, security headers, secrets migrated to Google Secret Manager |
 | **Recovery** | 3-2-1 backups: PITR (7d) + daily backups (14d) + object versioning + offsite weekly export |
 | **Detection** | File Integrity Monitoring (SHA-256, every 6h) + Cloud Monitoring log alerts + Dependabot / `npm audit` CI gate |
@@ -62,7 +62,7 @@ Security engineering work hardening a **production legal-services web platform**
 
 ## Tech stack
 
-**Cloud:** Firebase (Hosting, Authentication / Identity Platform, Firestore, Storage, Cloud Functions gen2 · Node 24), Google Cloud Platform, App Check (reCAPTCHA v3), Secret Manager, Cloud Monitoring, Cloud Scheduler.
+**Cloud:** Firebase (Hosting, Authentication / Identity Platform, Firestore, Storage, Cloud Functions), Google Cloud Platform, App Check, Secret Manager, Cloud Monitoring, Cloud Scheduler.
 **Security:** IAM / RBAC (custom claims), security rules as code, MFA/TOTP, Content-Security-Policy, penetration testing (nmap), File Integrity Monitoring (Python + GitHub Actions), Dependabot, PASTA threat modeling, NIST incident response.
 
 ## Skills demonstrated

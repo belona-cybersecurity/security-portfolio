@@ -48,11 +48,11 @@ gcloud storage cp "gs://.../FILE#GENERATION" "gs://.../FILE"
 
 ## Offsite backup (Level B) — operation
 - **Bucket:** `gs://cliente-a-backups` (`us` multi-region, 90-day lifecycle).
-- **Automated export:** Cloud Scheduler job `firestore-backup-weekly` (us-central1), Sundays 3am, exports to `gs://cliente-a-backups/scheduled` using the service account `firestore-backup@...` (role `datastore.importExportAdmin`).
+- **Automated export:** Cloud Scheduler job el job de export programado (us-central1), Sundays 3am, exports to `gs://cliente-a-backups/scheduled` using the service account `firestore-backup@...` (role `datastore.importExportAdmin`).
 
 ```bash
 gcloud scheduler jobs list --location=us-central1
-gcloud scheduler jobs run firestore-backup-weekly --location=us-central1   # run manually
+gcloud scheduler jobs run export-programado --location=us-central1   # run manually
 gcloud storage ls gs://cliente-a-backups/scheduled/                   # view latest copy
 # Restore from offsite export (CAUTION: overwrites/merges data)
 gcloud firestore import gs://cliente-a-backups/scheduled
