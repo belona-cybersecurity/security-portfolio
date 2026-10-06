@@ -1,24 +1,25 @@
-# Portafolio de seguridad — Belona Cybersecurity
+# Security Portfolio — Belona Cybersecurity
 
 **Belona Cybersecurity LLC** · Powder Springs, Georgia
 [belonacyber.com](https://belonacyber.com) · contact@belonacyber.com
 
-> **Sobre la anonimización.** Los trabajos aquí documentados son reales y se
-> realizaron con autorización del propietario. El nombre del cliente y los
-> identificadores de su infraestructura se reemplazaron por marcadores
-> (`Cliente A`, `cliente-a`) antes de publicarlos.
-> **Belona Cybersecurity no publica datos identificables de un cliente sin su
-> autorización por escrito** — la misma regla que aplicamos a cada encargo.
+> *Versión en español: [`espanol/README.md`](espanol/README.md)*
+
+> **On anonymization.** The work documented here is real and was performed under
+> authorization from the owner. The client's name and infrastructure identifiers
+> were replaced with placeholders (`Client A`, `cliente-a`) before publication.
+> **Belona Cybersecurity does not publish identifiable client data without written
+> authorization** — the same rule we apply to every engagement.
 
 ---
 
-Security engineering work hardening a **production legal-services web platform** on **Firebase / Google Cloud**, performed end to end as the sole technical owner: authentication, authorization, penetration testing with remediation, backups/DR, detection & monitoring, threat modeling, and data-protection compliance — applying **DevSecOps practices** (security-as-code, CI security gates) throughout.
+Hardening a production legal-services web platform on **Firebase / Google Cloud** — end to end, as the sole technical owner. This folder documents the security engineering work: authentication, authorization, penetration testing with remediation, backups/DR, monitoring, threat modeling, and data-protection compliance — applying DevSecOps practices (security-as-code, CI security gates) throughout.
 
-> **Start here:** [Case Study — DevSecOps](english/case-study-devsecops-troubleshooting-EN.pdf) — a 2-minute executive summary of the whole engagement.
+> **Start here:** [`case-study-devsecops.pdf`](case-study-devsecops.pdf) — a 2-minute executive summary of the whole engagement.
 
-![Security architecture diagram](english/security-architecture-diagram.svg)
+![Security architecture diagram](security-architecture-diagram.svg)
 
-*Defense-in-depth architecture — a shift-left CI/CD pipeline, runtime prevention, detection, response and recovery, mapped to NIST CSF.*
+*Defense-in-depth architecture — prevention (green), detection (amber), recovery (purple).*
 
 ---
 
@@ -30,38 +31,39 @@ Security engineering work hardening a **production legal-services web platform**
 | **Authorization** | Role-based access control (admin / lawyer / editor) enforced by Firestore & Storage security rules |
 | **Pentest** | 3-phase authorized test; found & remediated a **critical** `.git` + GitHub-token exposure served by Hosting |
 | **Abuse prevention** | App Check + server-side rate limiting on the contact form |
-| **Hardening** | Content-Security-Policy allow-list, security headers, secrets migrated to Google Secret Manager |
+| **Hardening** | Content-Security-Policy allow-list, security headers, secrets moved to a managed encrypted store |
 | **Recovery** | 3-2-1 backups: PITR (7d) + daily backups (14d) + object versioning + offsite weekly export |
 | **Detection** | File Integrity Monitoring (SHA-256, every 6h) + Cloud Monitoring log alerts + Dependabot / `npm audit` CI gate |
+| **Secrets** | API keys migrated from `.env` to Google Secret Manager |
 | **Compliance** | Consent capture + proof; privacy-policy international-transfer clause (Colombia's Law 1581, analogous to GDPR/CCPA) |
 
 **Result:** full **AAA** coverage (Authentication, Authorization, Accounting) and defense in depth across prevention / detection / recovery — with **no added third-party attack surface** and **no added recurring cost**.
 
 ---
 
-## Documents (English)
+## Documents
 
 | # | Document | What it covers |
 |---|---|---|
-| 1 | [Caso de estudio — DevSecOps](caso-de-estudio-devsecops.md) · [EN](english/case-study-devsecops-troubleshooting-EN.md) | Resumen ejecutivo de todo el trabajo (**empiece por aquí**) |
-| 2 | [Penetration Test Report](english/pentest-report-cliente-a-EN.pdf) | Recon, authz testing, privilege-escalation attempts, findings & remediation |
-| 3 | [PASTA Threat Model (stages 3–7)](english/pasta-threat-model-stages-3-7-EN.pdf) | Decomposition, threats, CWE/OWASP mapping, attack trees, residual-risk matrix |
-| 4 | [**Recovery capability: from "we have backups" to "we can restore"**](english/disaster-recovery-EN.md) | RPO/RTO, 3-2-1, and **a control documented as implemented that wasn't** — found by going to test the restore |
-| 5 | [**Email authentication: SPF, DKIM & DMARC**](english/email-authentication-EN.md) | Staged rollout (`none` → `quarantine` → `reject`), reading the first DMARC report, and a DNS migration with **zero mail downtime** |
-| 6 | [**Hardening a contact form against abuse**](english/hardening-contact-form-EN.md) | Eight layers on a Cloudflare Worker — captcha verified server-side, honeypot, secrets off disk — **each one exercised with `curl` in production** |
-| 7 | [Incident Response Playbooks](english/incident-response-playbooks-EN.pdf) | 5 NIST-based playbooks (breach, defacement, data loss, account compromise, DoS) |
-| 8 | [Security Awareness Training](english/security-awareness-training-EN.pdf) | 7 modules mapped to CIS Control 14 / NIST CSF PR.AT |
+| 1 | [Case Study — DevSecOps](case-study-devsecops.md) · [ES](espanol/caso-de-estudio-devsecops.md) | Executive overview of the full engagement (**read this first**) |
+| 2 | [Penetration Test Report](pentest-report.pdf) · [ES](espanol/informe-de-pentest.pdf) | Recon, authz testing, privilege-escalation attempts, findings & remediation |
+| 3 | [PASTA Threat Model (stages 3–7)](threat-model-pasta.pdf) · [ES](espanol/modelo-de-amenazas-pasta.pdf) | Decomposition, threats, CWE/OWASP mapping, attack trees, residual-risk matrix |
+| 4 | [**Recovery capability**](disaster-recovery.md) · [ES](espanol/recuperacion-ante-desastres.md) | RPO/RTO, 3-2-1, and **a control documented as implemented that wasn't** — found by going to test the restore |
+| 5 | [**Email authentication: SPF, DKIM & DMARC**](email-authentication.md) · [ES](espanol/autenticacion-de-correo.md) | Staged rollout, reading the first DMARC report, and a DNS migration with **zero mail downtime** |
+| 6 | [**Hardening a contact form**](hardening-contact-form.md) · [ES](espanol/endurecimiento-del-formulario.md) | Eight layers on a Cloudflare Worker, **each exercised with `curl` in production** |
+| 7 | [Incident Response Playbooks](incident-response-playbooks.pdf) · [ES](espanol/playbooks-de-respuesta.pdf) | 5 NIST-based playbooks (breach, defacement, data loss, account compromise, DoS) |
+| 8 | [Security Awareness Training](security-awareness-training.pdf) · [ES](espanol/formacion-en-seguridad.pdf) | 7 modules mapped to CIS Control 14 / NIST CSF PR.AT |
 
-*Each document is also available in Markdown (`.md`) next to the PDF. See [`english/`](english/) for the full set.*
 
-**Las versiones en español** están en la raíz del repositorio. Cada documento existe en los dos idiomas, salvo el caso de estudio inicial.
+*Each document is also available in Markdown (`.md`) alongside the PDF, and in
+Spanish under [`espanol/`](espanol/).*
 
 ---
 
 ## Tech stack
 
 **Cloud:** Firebase (Hosting, Authentication / Identity Platform, Firestore, Storage, Cloud Functions), Google Cloud Platform, App Check, Secret Manager, Cloud Monitoring, Cloud Scheduler.
-**Security:** IAM / RBAC (custom claims), security rules as code, MFA/TOTP, Content-Security-Policy, penetration testing (nmap), File Integrity Monitoring (Python + GitHub Actions), Dependabot, PASTA threat modeling, NIST incident response.
+**Security:** IAM / RBAC (custom claims), security rules as code, MFA/TOTP, penetration testing (nmap), File Integrity Monitoring (Python + GitHub Actions), Dependabot, PASTA threat modeling, NIST incident response.
 
 ## Skills demonstrated
 
@@ -69,4 +71,4 @@ Cloud security (GCP/Firebase) · IAM & RBAC · security rules as code · penetra
 
 ---
 
-*Plataforma en producción: sitio público + panel de administración de una firma legal. Work performed by the sole technical owner as a self-directed cloud security portfolio project. Sensitive values (keys, tokens, client data) are intentionally excluded from this repository.*
+*Production platform: a Colombian law firm's public website + admin panel. Work performed by the sole technical owner as a self-directed Cloud Security / DevSecOps portfolio project.*

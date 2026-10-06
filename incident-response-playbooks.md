@@ -1,85 +1,73 @@
-# Playbooks de Respuesta a Incidentes — Cliente A
+# Incident Response Playbooks — Cliente A
 
-> **Nota sobre anonimización.** Este informe documenta un trabajo real, realizado con
-> autorización del propietario. El nombre del cliente y los identificadores de su
-> infraestructura se reemplazaron por marcadores (`Cliente A`, `cliente-a`) antes de
-> publicarlo. Belona Cybersecurity no publica datos identificables de un cliente sin su
-> autorización por escrito.
+> **Anonymization note.** This report documents real work performed under authorization
+> from the owner. The client's name and infrastructure identifiers were replaced with
+> placeholders (`Cliente A`, `cliente-a`) before publication. Belona Cybersecurity does not
+> publish identifiable client data without written authorization.
 
-Manual de respuesta a incidentes de seguridad. Estructura basada en el ciclo
-**NIST** (Preparación → Detección → Contención → Erradicación → Recuperación →
-Lecciones aprendidas). Uso: seguir el playbook correspondiente ante el incidente.
+Security incident response manual. Structure based on the **NIST** cycle
+(Preparation → Detection → Containment → Eradication → Recovery → Lessons Learned).
+Follow the matching playbook when an incident occurs.
 
-## Contactos y accesos clave
+## Key contacts and access
 
-> Esta sección la completa el cliente con sus propios datos antes de que el
-> playbook entre en uso. Un procedimiento de respuesta sin teléfonos reales
-> no sirve: en un incidente nadie tiene tiempo de buscarlos.
-- Responsable técnico: **Belona Cybersecurity** — contact@belonacyber.com
-- Responsable de datos / legal: **legal@cliente-a.example**
-- Consola Firebase: https://console.firebase.google.com/project/cliente-a
-- Repo: github.com/<organizacion>/<repo-privado>
-- Autoridad de protección de datos (Colombia): **SIC** — sic.gov.co
-
----
-
-## Playbook 1 — Sitio comprometido / defacement (alerta del FIM)
-**Disparador:** llega una alerta del monitoreo de integridad ("CAMBIO en <archivo>") o el job FIM queda en rojo.
-
-1. **Detección/Verificación:** abrir el sitio en incógnito y comparar; revisar el log del FIM (qué archivo cambió). ¿Fue un deploy legítimo tuyo? → si sí, regenerar baseline y cerrar. Si NO →
-2. **Contención:** si hay contenido malicioso, redeployar de inmediato la versión buena desde Git (`firebase deploy --only hosting`) o hacer rollback del hosting en la consola. Considerar poner el sitio en mantenimiento.
-3. **Erradicación:** identificar cómo entró el cambio: ¿se filtró una credencial de deploy? ¿acceso al repo? Rotar credenciales de Firebase/GitHub. Revisar Actions/commits recientes.
-4. **Recuperación:** confirmar sitio limpio (FIM en verde), regenerar baseline.
-5. **Lecciones:** documentar causa raíz y reforzar el control que falló.
-
-## Playbook 2 — Cuenta de admin comprometida / acceso no autorizado
-**Disparador:** actividad extraña en los **Logs** del panel, cambios de rol no reconocidos, login sospechoso.
-
-1. **Contención inmediata:** en Firebase → Authentication → **deshabilitar** la cuenta sospechosa. Si es un abogado, quitarle el rol desde el panel (Usuarios) o poner `role: ninguno`.
-2. **Investigación:** revisar la sección **Logs** (auditoría) — qué acciones hizo, sobre qué recursos, cuándo. Revisar Cloud Logging.
-3. **Erradicación:** forzar cambio de contraseña; verificar/reactivar MFA; revocar sesiones.
-4. **Recuperación:** revertir cambios no autorizados (usar backups/PITR si tocó datos).
-5. **Lecciones:** ¿alcanzó el MFA? ¿hace falta reducir privilegios?
-
-## Playbook 3 — Fuga de datos personales (Data Breach) — Ley 1581
-**Disparador:** exposición o acceso no autorizado a datos de clientes (consultas, expedientes, documentos).
-
-1. **Contención:** cerrar el vector (reglas, permisos, tumbar el recurso expuesto).
-2. **Evaluación:** qué datos, de cuántos titulares, sensibilidad (datos financieros/legales = alta).
-3. **Notificación legal (OBLIGATORIA en Colombia):**
-   - Notificar a la **SIC** (Superintendencia de Industria y Comercio) el incidente.
-   - Informar a los **titulares afectados** según la política de tratamiento.
-   - Coordinar con el área legal (es un estudio jurídico: seguir el proceso formal).
-4. **Erradicación/Recuperación:** corregir la causa, rotar lo comprometido.
-5. **Lecciones:** registrar en el expediente de cumplimiento.
-
-> Nota: los plazos y la forma exacta de notificación los define el área legal. Este playbook solo recuerda la obligación.
-
-## Playbook 4 — Credencial / secreto expuesto
-**Disparador:** se encuentra un token/clave/contraseña en un lugar público (repo, sitio, logs) — ej. el hallazgo `.git` del pentest.
-
-1. **Contención:** quitar la exposición de inmediato (borrar el archivo, redeployar).
-2. **Rotar la credencial YA:** revocar y regenerar el secreto comprometido (GitHub token, API key, contraseña de app de Gmail, etc.). Asumir que ya fue visto.
-3. **Investigación:** ¿qué permisos tenía? ¿se usó? Revisar logs de acceso.
-4. **Prevención:** mover secretos a Secret Manager; nunca en el repo ni en el hosting.
-
-## Playbook 5 — Pérdida / borrado de datos
-**Disparador:** datos faltantes o borrados (accidental o malicioso).
-
-1. **No entrar en pánico ni escribir sobre la base** hasta evaluar.
-2. **Recuperar** según el runbook de backup:
-   - Reciente (≤7 días) → **PITR**
-   - Hasta 14 días → **backup diario** (restaurar a base nueva)
-   - Documentos borrados → **versionado de Storage**
-   - Ver: `recuperacion-ante-desastres.md`
-3. Validar la restauración antes de reemplazar producción.
-4. **Lecciones:** ¿por qué se borró? ¿hace falta más restricción o confirmaciones?
+> The client fills this section with their own details before the playbook
+> goes into use. A response procedure without real phone numbers is useless:
+> during an incident nobody has time to look them up.
+- Technical lead: **Belona Cybersecurity** — contact@belonacyber.com
+- Data/legal owner: **legal@cliente-a.example**
+- Firebase console: https://console.firebase.google.com/project/cliente-a
+- Repo: the organization's private repository (access through the technical lead)
+- Data protection authority (Colombia): **SIC** — sic.gov.co
 
 ---
 
-## Preparación (mantener siempre listo)
-- Backups activos y **probados** (test de restauración periódico).
-- FIM y Logs funcionando (detección).
-- MFA en todas las cuentas admin.
-- Este documento accesible offline.
-- Saber cómo: deshabilitar una cuenta, redeployar hosting, rotar secretos, restaurar backup.
+## Playbook 1 — Compromised site / defacement (FIM alert)
+**Trigger:** a file-integrity alert reaches the alerting channel (naming the file that changed) or the FIM job turns red.
+1. **Verify:** open the site in incognito and compare; check the FIM log (which file changed). Was it your own legitimate deploy? If yes → regenerate the baseline and close. If NO →
+2. **Contain:** if malicious content exists, immediately redeploy the good version from Git (`firebase deploy --only hosting`) or roll back Hosting in the console. Consider maintenance mode.
+3. **Eradicate:** determine how the change got in: leaked deploy credential? repo access? Rotate Firebase/GitHub credentials. Review recent Actions/commits.
+4. **Recover:** confirm clean site (FIM green), regenerate baseline.
+5. **Lessons:** document root cause and reinforce the failed control.
+
+## Playbook 2 — Compromised admin account / unauthorized access
+**Trigger:** unusual activity in the panel **Logs**, unrecognized role changes, suspicious login.
+1. **Immediate containment:** in Firebase → Authentication → **disable** the suspicious account. If a lawyer, remove their role in the panel (`role: none`).
+2. **Investigate:** review the **Logs** (audit) section — what actions, on what resources, when. Check Cloud Logging.
+3. **Eradicate:** force a password change; verify/re-enable MFA; revoke sessions.
+4. **Recover:** revert unauthorized changes (use backups/PITR if data was affected).
+5. **Lessons:** was MFA enough? should privileges be reduced?
+
+## Playbook 3 — Personal data breach — Colombian Law 1581 (analogous to GDPR/CCPA)
+**Trigger:** exposure or unauthorized access to client data (enquiries, cases, documents).
+1. **Contain:** close the vector (rules, permissions, take down the exposed resource).
+2. **Assess:** what data, how many subjects, sensitivity (financial/legal = high).
+3. **Legal notification (MANDATORY in Colombia):**
+   - Notify the **SIC** (data protection authority) of the incident.
+   - Inform **affected data subjects** per the privacy policy.
+   - Coordinate with legal (it is a law firm: follow the formal process).
+4. **Eradicate/Recover:** fix the cause, rotate anything compromised.
+5. **Lessons:** record in the compliance file.
+
+## Playbook 4 — Exposed credential / secret
+**Trigger:** a token/key/password found in a public place (repo, site, logs) — e.g., the `.git` pentest finding.
+1. **Contain:** remove the exposure immediately (delete file, redeploy).
+2. **Rotate the credential NOW:** revoke and regenerate the compromised secret (repository token, API key, mail credential, etc.). Assume it was seen.
+3. **Investigate:** what permissions did it have? was it used? Check access logs.
+4. **Prevent:** move secrets to Secret Manager; never in the repo or Hosting.
+
+## Playbook 5 — Data loss / deletion
+**Trigger:** missing or deleted data (accidental or malicious).
+1. **Do not panic or write over the database** until assessed.
+2. **Recover** per the backup runbook: recent (≤7 days) → **PITR**; up to 14 days → **daily backup**; deleted documents → **Storage versioning**.
+3. Validate the restore before replacing production.
+4. **Lessons:** why was it deleted? more restriction or confirmations needed?
+
+---
+
+## Preparation (keep ready at all times)
+- Active, **tested** backups (periodic restore test).
+- FIM and Logs working (detection).
+- MFA on all admin accounts.
+- This document available offline.
+- Know how to: disable an account, redeploy hosting, rotate secrets, restore a backup.

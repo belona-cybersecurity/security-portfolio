@@ -1,82 +1,73 @@
-# Capacitación en Concientización de Seguridad — Cliente A
+# Security Awareness Training — Cliente A
 
-> **Nota sobre anonimización.** Este informe documenta un trabajo real, realizado con
-> autorización del propietario. El nombre del cliente y los identificadores de su
-> infraestructura se reemplazaron por marcadores (`Cliente A`, `cliente-a`) antes de
-> publicarlo. Belona Cybersecurity no publica datos identificables de un cliente sin su
-> autorización por escrito.
-### Dirigido a: usuarios del panel · Estudio jurídico
+> **Anonymization note.** This report documents real work performed under authorization
+> from the owner. The client's name and infrastructure identifiers were replaced with
+> placeholders (`Cliente A`, `cliente-a`) before publication. Belona Cybersecurity does not
+> publish identifiable client data without written authorization.
+### Audience: panel users (e.g., lawyers) · Law firm
 
-**Marco de referencia:** CIS Controls v8 — **Control 14** (Security Awareness and
-Skills Training) y **NIST CSF — PR.AT** (Awareness and Training). Cada módulo
-indica el control que lo respalda.
+**Framework:** CIS Controls v8 — **Control 14** (Security Awareness and Skills
+Training) and **NIST CSF — PR.AT** (Awareness and Training). Each module notes the
+control that backs it.
 
-> Objetivo: que las personas que usan el sistema entiendan los riesgos y actúen
-> de forma segura. **El eslabón más débil suele ser el humano, no la tecnología.**
-
----
-
-## Módulo 1 — Contraseñas y gestión de credenciales
-*(CIS 14.x · NIST PR.AT / PR.AC)*
-- Usá contraseñas **largas y únicas** (frase de 12+ caracteres). Nunca reutilices la del correo.
-- Usá un **gestor de contraseñas** (para no memorizar ni anotar en papel).
-- **Nunca compartas tu cuenta ni tu contraseña** — cada persona tiene la suya (así los Logs saben quién hizo qué).
-- Si sospechás que alguien la vio, **cambiala de inmediato**.
-
-## Módulo 2 — Autenticación en dos pasos (MFA)
-*(NIST PR.AC-7)*
-- El panel exige **MFA (Google Authenticator)** — es tu segunda barrera si roban tu contraseña.
-- **No aceptes** solicitudes de MFA que no iniciaste vos (podría ser un atacante intentando entrar).
-- Guardá bien el acceso a tu app de Authenticator.
-
-## Módulo 3 — Phishing e ingeniería social
-*(CIS 14.2 · los estudios jurídicos son blanco frecuente)*
-- **Desconfiá de correos/mensajes urgentes** que piden credenciales, clics o transferencias.
-- Verificá el **remitente real** y **no hagas clic** en links sospechosos (pasá el mouse para ver la URL real).
-- Ante un "correo del banco/Google/jefe" pidiendo datos → **confirmá por otro canal** antes de actuar.
-- Recordá: nadie legítimo te va a pedir tu contraseña por correo.
-
-## Módulo 4 — Manejo de datos confidenciales de clientes (Ley 1581)
-*(CIS 14.4 · cumplimiento legal)*
-- Los datos de consultas y expedientes son **confidenciales y sensibles**. Tratalos con el máximo cuidado.
-- **No descargues** documentos de clientes a dispositivos personales sin necesidad; no los reenvíes por canales inseguros.
-- Accedé solo a lo que necesitás para tu trabajo (**mínimo privilegio**).
-- Ante un pedido de un cliente sobre sus datos (acceso, corrección, supresión) → seguir el procedimiento de la Política de Tratamiento.
-
-## Módulo 5 — Uso seguro del panel de administración
-*(NIST PR.AC)*
-- **Cerrá sesión** cuando termines, sobre todo en equipos compartidos.
-- **Bloqueá la pantalla** (Win+L) si te alejás del equipo.
-- No dejes el panel abierto a la vista de terceros.
-- Usá tu rol asignado; si necesitás más permisos, pedilos (no busques rodeos).
-
-## Módulo 6 — Dispositivos y redes
-*(CIS 14.x)*
-- Mantené el sistema operativo y el navegador **actualizados**.
-- Tené **antivirus** activo.
-- Cuidado con **WiFi público**: evitá acceder al panel desde redes no confiables.
-- No instales extensiones/programas de origen dudoso.
-
-## Módulo 7 — Reporte de incidentes
-*(CIS 14.6 · NIST RS)*
-- Si ves **algo raro** (un correo sospechoso, una alerta, acceso que no reconocés, un archivo cambiado):
-  1. **No lo ignores.**
-  2. **Avisá de inmediato** al responsable técnico y/o a legal@cliente-a.example.
-  3. No intentes "arreglarlo" solo si no estás seguro.
-- Reportar a tiempo puede evitar un incidente grave. **Reportar no es molestar, es proteger.**
+> Goal: everyone using the system understands the risks and acts securely.
+> **The weakest link is usually the human, not the technology.**
 
 ---
 
-## Evaluación rápida (marcá lo que harías bien)
-- [ ] Uso una contraseña única y MFA
-- [ ] No comparto mi cuenta
-- [ ] Verifico remitentes antes de hacer clic
-- [ ] Cierro sesión y bloqueo la pantalla
-- [ ] Sé a quién avisar ante un incidente
+## Module 1 — Passwords and credential management *(CIS 14.x · NIST PR.AC)*
+- Use **long, unique** passwords (12+ character passphrase). Never reuse your email password.
+- Use a **password manager**.
+- **Never share your account or password** — each person has their own (so the Logs know who did what).
+- If you suspect it was seen, **change it immediately**.
 
-## Frecuencia recomendada
-- Capacitación **al ingresar** + **repaso anual** (CIS 14.1).
-- Actualizar el material cuando cambien las amenazas o el sistema.
+## Module 2 — Multi-factor authentication (MFA) *(NIST PR.AC-7)*
+- The panel requires **MFA (Google Authenticator)** — your second barrier if your password is stolen.
+- **Do not approve** MFA prompts you did not initiate (could be an attacker trying to log in).
+- Protect access to your Authenticator app.
 
-*Basado en CIS Controls v8 (Control 14) y NIST CSF (PR.AT). Ver también los
-playbooks de respuesta a incidentes.*
+## Module 3 — Phishing and social engineering *(CIS 14.2 · law firms are frequent targets)*
+- **Be suspicious of urgent emails/messages** asking for credentials, clicks, or transfers.
+- Verify the **real sender** and **don't click** suspicious links (hover to see the real URL).
+- For a "bank/Google/boss" email asking for data → **confirm through another channel** first.
+- Remember: no legitimate party will ask for your password by email.
+
+## Module 4 — Handling confidential client data (Law 1581 — Colombian data protection) *(CIS 14.4)*
+- Consultation and case data are **confidential and sensitive**. Handle with maximum care.
+- **Do not download** client documents to personal devices unnecessarily; do not forward via insecure channels.
+- Access only what you need for your work (**least privilege**).
+- For a client request about their data (access, correction, deletion) → follow the privacy policy procedure.
+
+## Module 5 — Secure use of the admin panel *(NIST PR.AC)*
+- **Log out** when done, especially on shared computers.
+- **Lock the screen** (Win+L) if you step away.
+- Do not leave the panel visible to third parties.
+- Use your assigned role; if you need more permissions, request them (don't seek workarounds).
+
+## Module 6 — Devices and networks *(CIS 14.x)*
+- Keep the OS and browser **updated**.
+- Keep **antivirus** active.
+- Be careful with **public Wi-Fi**: avoid accessing the panel from untrusted networks.
+- Do not install extensions/programs of dubious origin.
+
+## Module 7 — Incident reporting *(CIS 14.6 · NIST RS)*
+- If you see **something odd** (a suspicious email, an alert, unrecognized access, a changed file):
+  1. **Do not ignore it.**
+  2. **Report immediately** to the technical lead and/or legal@cliente-a.example.
+  3. Don't try to "fix it" yourself if unsure.
+- Reporting on time can prevent a major incident. **Reporting isn't bothering — it's protecting.**
+
+---
+
+## Quick self-check (mark what you'd do right)
+- [ ] I use a unique password and MFA
+- [ ] I don't share my account
+- [ ] I verify senders before clicking
+- [ ] I log out and lock the screen
+- [ ] I know who to notify about an incident
+
+## Recommended frequency
+- Training **at onboarding** + **annual refresh** (CIS 14.1).
+- Update the material when threats or the system change.
+
+*Based on CIS Controls v8 (Control 14) and NIST CSF (PR.AT). See also the incident response playbooks.*
