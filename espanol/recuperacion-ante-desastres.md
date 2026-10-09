@@ -156,19 +156,48 @@ no podía, no porque no hubiera nada.
 
 ---
 
-## Lo que sigue pendiente
-
-**La prueba de restauración completa no se ha ejecutado.** Los respaldos están
-configurados y verificados como existentes; que se puedan restaurar de punta a
-punta está **deducido, no comprobado**.
-
-Es el pendiente principal de este trabajo y está declarado aquí a propósito:
+## La prueba de restauración — ejecutada el 8 de octubre de 2026
 
 > **Un respaldo que nunca se ha restaurado no es un respaldo verificado. Es un
 > respaldo supuesto.**
 
-El procedimiento está escrito —restaurar a una base temporal, validar, eliminar
-la temporal— y no toca producción. Pendiente de ejecutarse y registrarse.
+Esa frase estuvo meses en este documento como una carencia declarada. Ya no.
+
+Se restauró la copia diaria más reciente a una **base de datos nueva y
+temporal**, nunca encima de producción. Después se comparó cada colección
+contra la base viva:
+
+```
+coleccion               produccion  restaurada   lectura
+auditoria                        4          4    identicas
+consultas                       17         17    identicas
+guias                            3          3    identicas
+leads_auditor                    2          2    identicas
+posts                            1          1    identicas
+procesos_insolvencia             1          1    identicas
+rate_limits                      6          6    identicas
+servicios                        4          4    identicas
+--------------------------------------------------------
+8 colecciones · 0 discrepancias · RESTAURACION VALIDA
+```
+
+La base temporal se eliminó al terminar. **RTO medido: unos minutos**, coherente
+con lo que suponía el diseño.
+
+### La parte que vale la pena conservar
+
+La primera validación se hizo contra **una lista de nombres de colecciones
+escrita de memoria** — y esa lista estaba mal. Nombraba una colección que no
+existe y omitía tres que sí, entre ellas `procesos_insolvencia`: la que guarda
+los expedientes de los clientes.
+
+Esa primera ejecución habría reportado éxito. No habría validado nada.
+
+La segunda versión **le preguntó a cada base qué colecciones tenía** y comparó
+la unión de las dos.
+
+> Una verificación que solo comprueba lo que te acordaste de comprobar no es una
+> verificación. **Enumera; no supongas.**
 
 Dos observaciones menores encontradas en la misma revisión:
 

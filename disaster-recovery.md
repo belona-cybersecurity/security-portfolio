@@ -155,20 +155,47 @@ was nothing.
 
 ---
 
-## What's still pending
-
-**The full restore test has not been executed.** The backups are configured and
-verified to exist; that they can be restored end to end is **inferred, not
-measured**.
-
-It's the main outstanding item of this work and it's stated here deliberately:
+## The restore test — executed 8 October 2026
 
 > **A backup that has never been restored isn't a verified backup. It's an
 > assumed one.**
 
-The procedure is written — restore to a temporary database, validate, delete the
-temporary one — and it never touches production. Pending execution and
-recording.
+That line sat in this document as a declared gap for months. It no longer does.
+
+The most recent daily backup was restored to a **new, temporary database**,
+never over production. Then every collection was compared against the live one:
+
+```
+collection              production   restored    reading
+auditoria                        4          4    identical
+consultas                       17         17    identical
+guias                            3          3    identical
+leads_auditor                    2          2    identical
+posts                            1          1    identical
+procesos_insolvencia             1          1    identical
+rate_limits                      6          6    identical
+servicios                        4          4    identical
+--------------------------------------------------------
+8 collections · 0 discrepancies · RESTORE VALID
+```
+
+The temporary database was deleted afterwards. **RTO measured: a few minutes**,
+consistent with what the design assumed.
+
+### The part worth keeping
+
+The first validation ran against **a hard-coded list of collection names** —
+and that list was wrong. It named a collection that doesn't exist, and missed
+three that do, including `procesos_insolvencia`: the one that holds the client
+case files.
+
+That first run would have reported success. It would have validated nothing.
+
+The second version **asked each database which collections it had** and compared
+the union of both.
+
+> A verification that only checks what you remembered to check is not a
+> verification. **Enumerate; don't assume.**
 
 Two minor observations from the same review:
 
